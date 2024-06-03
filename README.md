@@ -17,7 +17,7 @@ Execute o comando npx cypress open no terminal dentro da pasta clonada.
 
 Abra o projeto no VS Code para melhor visualização.
 
-     Certifique-se de ter o framework de automação de testes Cypress instalado previamente.
+O framework de automação de testes Cypress tem que está instalado previamente.
 
 Tenha o Intelij Idea Community instalado para executar a API com o JDK no projeto.
 
