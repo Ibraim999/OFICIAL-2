@@ -1,7 +1,6 @@
 
 *REPOSITÓRIO DE TESTE DE UMA API DE MATRICULAS*
 
-*Tecnologias Utilizadas*
 
 Teste automatizado utilizando Cypress
 
@@ -15,9 +14,9 @@ Clone o repositório para o seu gerenciador de arquivos local.
 
 Execute o comando npx cypress open no terminal dentro da pasta clonada.
 
-Abra o projeto no VS Code para melhor visualização.
+Abra o projeto no VS Code.
 
-O framework de automação de testes Cypress tem que está instalado previamente.
+Cypress tem que está instalado.
 
 Tenha o Intelij Idea Community instalado para executar a API com o JDK no projeto.
 
@@ -29,4 +28,4 @@ Endpoint: http://localhost:8080/v1/matriculas/{numero_da_matricula}
 
 Método: GET
 
-Configure o Postman com o header: X-API-KEY = unime-qualidade-oficial2, pois todas as chamadas à API devem informar esse header com o valor unime-qualidade-oficial2.
+Configure o Postman com o header: X-API-KEY = unime-qualidade-oficial2.
