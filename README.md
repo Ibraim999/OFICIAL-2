@@ -8,7 +8,7 @@ API testada: https://github.com/PHPauloReis/oficial2-matriculas-api/
 
 História de usúarios: https://dear-creature-6bf.notion.site/Avalia-o-Oficial-2-Gerenciamento-e-Qualidade-de-Softwares-e329b3e6e42c4998ac1eff689e670d6e
 
-*Pré-requisitos*
+*Pré-requisitos:*
 
 Clone o repositório para o seu gerenciador de arquivos local.
 
@@ -22,7 +22,7 @@ Tenha o Intelij Idea Community instalado para executar a API com o JDK no projet
 
 Instale o Postman para rodar as requisições.
 
-*Utilização da API*
+*Utilização da API:*
 
 Endpoint: http://localhost:8080/v1/matriculas/{numero_da_matricula}
 
