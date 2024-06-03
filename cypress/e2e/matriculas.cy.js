@@ -17,20 +17,25 @@ describe('API de consulta de dados da matrícula dos alunos', () => {
 
     // Verifica as propriedades de 'courseName'
     expect(response.body).to.have.property('courseName').that.is.a('string');
+    expect(response.body.courseName.length).to.be.greaterThan(0);
 
     // Verifica as propriedades do objeto 'tuition'
     expect(response.body).to.have.property('tuition').that.is.an('object');
     expect(response.body.tuition).to.have.property('amount').that.is.a('number');
     expect(response.body.tuition).to.have.property('formattedAmount').that.is.a('string');
+    expect(response.body.tuition.formattedAmount.length).to.be.greaterThan(0);
     expect(response.body.tuition).to.have.property('dueDate').that.is.a('string');
     expect(response.body.tuition).to.have.property('status').that.is.a('string');
 
     // Verifica as propriedades do objeto 'student'
     expect(response.body).to.have.property('student').that.is.an('object');
     expect(response.body.student).to.have.property('firstName').that.is.a('string');
+    expect(response.body.student.firstName.length).to.be.greaterThan(0);
     expect(response.body.student).to.have.property('lastName').that.is.a('string');
+    expect(response.body.student.lastName.length).to.be.greaterThan(0);
     expect(response.body.student).to.have.property('birthDate').that.is.a('string');
     expect(response.body.student).to.have.property('cpf').that.is.a('string');
+    expect(response.body.student.cpf.length).to.be.greaterThan(0);
 });
 });
 
@@ -70,20 +75,25 @@ it('Deve ser possível consultar os dados de uma matrícula de aluno bolsista 10
 
       // Verifica as propriedades de 'courseName'
       expect(response.body).to.have.property('courseName').that.is.a('string');
+      expect(response.body.courseName.length).to.be.greaterThan(0);
 
       // Verifica as propriedades do objeto 'tuition'
       expect(response.body).to.have.property('tuition').that.is.an('object');
       expect(response.body.tuition).to.have.property('amount').that.is.a('number').and.to.eq(0.0);
       expect(response.body.tuition).to.have.property('formattedAmount').that.is.a('string').and.to.eq('R$ 0.00');
+      expect(response.body.tuition.formattedAmount.length).to.be.greaterThan(0);
       expect(response.body.tuition).to.have.property('dueDate').to.be.null;
       expect(response.body.tuition).to.have.property('status').that.is.a('string').and.to.eq('BOLSISTA_100');
 
       // Verifica as propriedades do objeto 'student'
       expect(response.body).to.have.property('student').that.is.an('object');
       expect(response.body.student).to.have.property('firstName').that.is.a('string');
+      expect(response.body.student.firstName.length).to.be.greaterThan(0);
       expect(response.body.student).to.have.property('lastName').that.is.a('string');
+      expect(response.body.student.lastName.length).to.be.greaterThan(0);
       expect(response.body.student).to.have.property('birthDate').that.is.a('string');
       expect(response.body.student).to.have.property('cpf').that.is.a('string');
+      expect(response.body.student.cpf.length).to.be.greaterThan(0);
 });
 });
 
@@ -104,21 +114,26 @@ it('Deve ser possível consultar os dados de uma matrícula de aluno bolsista 50
 
     // Verifica as propriedades de 'courseName'
     expect(response.body).to.have.property('courseName').that.is.a('string');
+    expect(response.body.courseName.length).to.be.greaterThan(0);
 
     // Verifica as propriedades do objeto 'tuition'
     expect(response.body).to.have.property('tuition').that.is.an('object');
     expect(response.body.tuition).to.have.property('amount').that.is.a('number');
     expect(response.body.tuition).to.have.property('formattedAmount').that.is.a('string');
+    expect(response.body.tuition.formattedAmount.length).to.be.greaterThan(0);
     expect(response.body.tuition).to.have.property('dueDate').to.be.null;
-    expect(response.body.tuition).to.have.property('status').that.is.a('string').and.not.eq('BOLSISTA_50');//pede para nao retornar esse status no cenario
+    expect(response.body.tuition).to.have.property('status').that.is.a('string').and.not.eq('BOLSISTA_50');
 
     // Verifica as propriedades do objeto 'student'
     expect(response.body).to.have.property('student').that.is.an('object');
     expect(response.body.student).to.have.property('firstName').that.is.a('string');
+    expect(response.body.student.firstName.length).to.be.greaterThan(0);
     expect(response.body.student).to.have.property('lastName').that.is.a('string');
+    expect(response.body.student.lastName.length).to.be.greaterThan(0);
     expect(response.body.student).to.have.property('birthDate').to.be.null;
     expect(response.body.student).to.have.property('cpf').that.is.a('string');
-});
+    expect(response.body.student.cpf.length).to.be.greaterThan(0);
+  });
 });
 
 it('Deve ser possível consultar os dados de uma matrícula de um aluno que já realizou todos os pagamentos das mensalidades futuras.', () => {
@@ -137,21 +152,26 @@ it('Deve ser possível consultar os dados de uma matrícula de um aluno que já 
     expect(response.body).to.have.property('id', '1122334');
 
     // Verifica as propriedades de 'courseName'
-    expect(response.body).to.have.property('courseName').that.is.a('string').and.to.have.length.greaterThan(0);
+    expect(response.body).to.have.property('courseName').that.is.a('string');
+    expect(response.body.courseName.length).to.be.greaterThan(0);
 
     // Verifica as propriedades do objeto 'tuition'
     expect(response.body).to.have.property('tuition').that.is.an('object');
     expect(response.body.tuition).to.have.property('amount').that.is.a('number');
     expect(response.body.tuition).to.have.property('formattedAmount').that.is.a('string');
+    expect(response.body.tuition.formattedAmount.length).to.be.greaterThan(0);
     expect(response.body.tuition).to.have.property('dueDate').to.be.null; // A data de vencimento não deve ser retornada
     expect(response.body.tuition).to.have.property('status', 'CONTRATO_QUITADO'); // Verifica o status 'CONTRATO_QUITADO'
 
     // Verifica as propriedades do objeto 'student'
     expect(response.body).to.have.property('student').that.is.an('object');
-    expect(response.body.student).to.have.property('firstName').that.is.a('string').and.to.have.length.greaterThan(0);
-    expect(response.body.student).to.have.property('lastName').that.is.a('string').and.to.have.length.greaterThan(0);
+    expect(response.body.student).to.have.property('firstName').that.is.a('string');
+    expect(response.body.student.firstName.length).to.be.greaterThan(0);
+    expect(response.body.student).to.have.property('lastName').that.is.a('string');
+    expect(response.body.student.lastName.length).to.be.greaterThan(0);
     expect(response.body.student).to.have.property('birthDate').that.is.a('string');
     expect(response.body.student).to.have.property('cpf').that.is.a('string');
+    expect(response.body.student.cpf.length).to.be.greaterThan(0);
 });
 });
 
