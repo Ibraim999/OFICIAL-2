@@ -114,7 +114,7 @@ it('Deve ser possível consultar os dados de uma matrícula de aluno bolsista 50
 
     // Verifica as propriedades de 'courseName'
     expect(response.body).to.have.property('courseName').that.is.a('string');
-    expect(response.body.courseName.length).to.be.greaterThan(0);
+    expect(response.body.courseName.length).to.be.greaterThan(0);//erro, api não tem nada de matricula
 
     // Verifica as propriedades do objeto 'tuition'
     expect(response.body).to.have.property('tuition').that.is.an('object');
@@ -122,7 +122,7 @@ it('Deve ser possível consultar os dados de uma matrícula de aluno bolsista 50
     expect(response.body.tuition).to.have.property('formattedAmount').that.is.a('string');
     expect(response.body.tuition.formattedAmount.length).to.be.greaterThan(0);
     expect(response.body.tuition).to.have.property('dueDate').to.be.null;
-    expect(response.body.tuition).to.have.property('status').that.is.a('string').and.not.eq('BOLSISTA_50');
+    expect(response.body.tuition).to.have.property('status').that.is.a('string').and.not.eq('BOLSISTA_50');//api não retorna esse valor
 
     // Verifica as propriedades do objeto 'student'
     expect(response.body).to.have.property('student').that.is.an('object');
